@@ -9,8 +9,8 @@ export const getCurrencyValues = (): Promise<currenciesValueApiDataType> => {
     return axios.get(URL)
     .then((res: any) => {
         // Если ответ не придёт(бывает, если быстро отправить несколько запросов), запрос отправляется заново
-        if (res.data.quotes != undefined) return res.data.quotes;
-        if (res.data.quotes == undefined) {
+        if (res.data.quotes !== undefined) return res.data.quotes;
+        if (res.data.quotes === undefined) {
             axios.get(URL)
                 .then((res: any): currenciesValueApiDataType => res.data.quotes);
         }

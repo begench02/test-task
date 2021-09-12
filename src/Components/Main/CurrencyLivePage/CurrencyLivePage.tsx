@@ -22,7 +22,7 @@ export default function CurrencyLivePage() {
 
             <div className='currency_live_selector_block'>
                 <Selector onCurrencyChange={onSelectorChange} isFetching={isFetching}/>
-                {isFetching ? <img src={loader} className='currancy_page_loader_image'/> : null}
+                {isFetching ? <img src={loader} alt='loader_image' className='currancy_page_loader_image'/> : null}
             </div>
 
             <div className='currencies_block'>
