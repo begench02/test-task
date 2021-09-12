@@ -1,0 +1,28 @@
+.input {
+    width: 100%;
+    margin: 0px 50px;
+    padding: 10px;
+    font-size: 3vw;
+}
+
+.input_section_currency_select_block {
+    margin-bottom: 50px;
+}
+
+@media (max-width: 550px) { 
+    .label {
+        font-size: 25px;
+    }
+    .input {
+        margin-top: 10px;
+        font-size: 10vw;
+        height: 10vh;
+        margin: 0px;
+        padding: 0px;
+        width: 90%;
+    }
+    .input_section_currency_select_block {
+        margin-left: 20px;
+        font-size: 25px;
+    }
+}

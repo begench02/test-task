@@ -1,0 +1,13 @@
+.error_page_main_block {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 85vh;
+    font-size: 2vw;
+    color: #fff;
+}
+
+.error_page_link {
+    text-decoration: none;
+    color: #809E81;
+}

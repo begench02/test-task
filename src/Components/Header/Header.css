@@ -1,0 +1,24 @@
+.header_main_block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100px;
+    justify-items: center;
+    align-items: center;
+    background-color: #D59974;
+}
+
+.header_text {
+    text-decoration: none;
+    color: #0B2730;
+    font-size: 3vw;
+}
+
+@media(max-width: 550px) {
+    .header_main_block {
+        grid-template-columns: 1fr;
+    }
+    .header_text {
+        font-size: 25px;
+    }
+}
+

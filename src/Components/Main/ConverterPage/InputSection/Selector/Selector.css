@@ -1,0 +1,8 @@
+.select {
+    border-radius: 10px;
+    font-weight: bold;
+    padding-left: 10px;
+    width: 75px;
+    height: 40px;
+    cursor: pointer;
+}
