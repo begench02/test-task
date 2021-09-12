@@ -28,7 +28,7 @@ export default function CurrencyLivePage() {
             <div className='currencies_block'>
                 {(currencies == null) ? null : currencies.map((currency: [string, number]) => (
                     <div className='currency_block'>
-                        <h2 className='currency_name'>{currency[0].slice(3)}</h2>
+                        <h2 className='currency_name'>{currency[0]}</h2>
                         <p className='currency_value'>{currency[1]}</p>
                     </div>
                     )

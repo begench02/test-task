@@ -27,12 +27,12 @@ export const ConverterReducer = (state = ConverterInitialState, actions: Actions
         case 'FROM-CURRENCY-CHANGE':
             return {
                 ...state,
-                from: `USD${actions.fromCurrency}`
+                from: actions.fromCurrency
             }
         case 'TO-CURRENCY-CHANGE':
             return {
                 ...state,
-                to: `USD${actions.toCurrency}`
+                to: actions.toCurrency
             }
         case 'CONVERTED-VALUE-CHANGE':
                 return {

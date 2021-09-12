@@ -19,7 +19,7 @@ export const CurrencyLiveReducer = (state = CurrencyLiveInitialState, actions: C
         case 'BASE-CURRENCY-CHANGE':
             return {
                 ...state,
-                baseCurrencyName: `USD${actions.currencyName}`
+                baseCurrencyName: actions.currencyName
             }
         case 'ADD-CURRENCIES':
             return {
@@ -42,10 +42,10 @@ export const addCurrenciesThunk = (baseCurrency: string): ThunkType => {
         dispatch(CurrencyLiveActions.changeFetching());
         dispatch(CurrencyLiveActions.baseCurrencyChange(baseCurrency));
         const currencies: {[key: string]: number} = await getCurrencyValues();
-        for (let currency in currencies) {
-            if (currency === `USD${baseCurrency}`) continue;
+        for (let currency in currencies) { 
+            if (currency === baseCurrency) continue;
             // Вычисляется новое значение относительно базовой валюты
-            currencies[currency] = Number((currencies[currency] / currencies[`USD${baseCurrency}`]).toFixed(5));
+            currencies[currency] = Number((currencies[currency] / currencies[baseCurrency]).toFixed(5));
         }
         let currenciesArr: [string, number][] = await (Object.entries(currencies));
         
