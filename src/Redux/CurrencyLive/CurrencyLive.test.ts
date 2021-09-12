@@ -11,7 +11,7 @@ beforeEach(() => {
 
 test('Change base currency name', () => {
     const newState = CurrencyLiveReducer(state, CurrencyLiveActions.baseCurrencyChange('USD'));
-    expect(newState.baseCurrencyName).toBe('USDUSD');
+    expect(newState.baseCurrencyName).toBe('USD');
 });
 
 test('Add currencies', () => {

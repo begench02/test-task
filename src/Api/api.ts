@@ -8,6 +8,8 @@ export const getCurrencyValues = (): Promise<currenciesValueApiDataType> => {
     // Отправляем запрос на https://currencyapi.net
     return axios.get(URL)
     .then((res: any) => {
+        console.log(res);
+        
         // Если ответ не придёт(бывает, если быстро отправить несколько запросов), запрос отправляется заново
         if (res.data.rates !== undefined) return res.data.rates;
         if (res.data.rates === undefined) {

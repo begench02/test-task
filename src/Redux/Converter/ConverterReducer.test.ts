@@ -1,4 +1,4 @@
-import { ConverterInitialStateType, ConverterReducer, ConverterActions, convertCurrency } from './ConverterReducer';
+import { ConverterInitialStateType, ConverterReducer, ConverterActions } from './ConverterReducer';
 
 let state: ConverterInitialStateType;
 
@@ -13,12 +13,12 @@ beforeEach(() => {
 });
 test('Change from currency', () => {
     const newState = ConverterReducer(state, ConverterActions.fromCurrencyChange('RUB'));
-    expect(newState.from).toBe('USDRUB');
+    expect(newState.from).toBe('RUB');
 });
 
 test('Change to currency', () => {
     const newState = ConverterReducer(state, ConverterActions.toCurrencyChange('RUB'));
-    expect(newState.to).toBe('USDRUB');
+    expect(newState.to).toBe('RUB');
 });
 
 test('Change fetching', () => {

@@ -7,5 +7,5 @@ it('Should change select', () => {
     const {getByTestId} = render(<Provider store={store}> <CurrencyLivePage /> </Provider>);
     fireEvent.change(getByTestId('selector'), { target: { value: 'TMT' } });
     let baseCurrencyName = store.getState().currencyLive.baseCurrencyName;
-    expect(baseCurrencyName).toBe('USDTMT');
+    expect(baseCurrencyName).toBe('TMT');
 })
