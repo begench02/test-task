@@ -7,10 +7,8 @@ export default function App() {
   return (
     <div className="App">
       <Header />
-      <Switch>
         {Routes.map(({ path, Component}) => <Route key={path} path={path} component={Component} exact/>)}
         <Route exact path='/' render={() => <Redirect to={'/converter'} />} />
-      </Switch>
-    </div>
+    </div> 
   );
 };
